@@ -30,6 +30,7 @@ to [-c] [-e extension] [filename]
 
 ## Examples
 ```sh
+to                 # create and open ~/Desktop/untitled.txt
 to note            # create and open ~/Desktop/note.txt
 to -e md           # create and open ~/Desktop/untitled.md
 to note.md         # create and open ~/Desktop/note.md
