@@ -36,5 +36,10 @@ to() {
   fi
 
   touch "${dir}/${name}.${ext}"
-  open "${dir}/${name}.${ext}"
+
+  if [[ "${OSTYPE}" == "linux-gnu"* ]]; then
+    xdg-open "${dir}/${name}.${ext}"
+  elif [[ "${OSTYPE}" == "darwin"* ]]; then
+    open "${dir}/${name}.${ext}"
+  fi
 }
