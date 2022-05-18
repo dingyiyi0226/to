@@ -27,9 +27,9 @@ to() {
     name="$1"
   fi
 
-  if [[ -e "${name}.${ext}" || -L "${name}.${ext}" ]]; then
+  if [[ -e "${dir}/${name}.${ext}" || -L "${dir}/${name}.${ext}" ]]; then
     i=1
-    while [[ -e "${name}-${i}.${ext}" || -L "${name}-${i}.${ext}" ]]; do
+    while [[ -e "${dir}/${name}-${i}.${ext}" || -L "${dir}/${name}-${i}.${ext}" ]]; do
       (( i++ ))
     done
     name="${name}-${i}"
