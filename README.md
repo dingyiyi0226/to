@@ -27,6 +27,7 @@ to [-c] [-e extension] [filename]
     ```
     exec $SHELL
     ```
+4. Change the default extension by modify `DEFAULT_EXTENSION` in [to](to) file
 
 ## Examples
 ```sh
