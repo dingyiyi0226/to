@@ -1,4 +1,6 @@
 to() {
+  DEFAULT_EXTENSION="txt"
+
   if [[ $1 == "-h" || $1 == "--help" ]]; then
     echo "Usage: to [-c] [-e extension] [filename]"
     return
@@ -15,7 +17,7 @@ to() {
     ext="$2"
     shift 2
   else
-    ext="txt"
+    ext="${DEFAULT_EXTENSION}"
   fi
 
   if [[ -z $1 ]]; then
